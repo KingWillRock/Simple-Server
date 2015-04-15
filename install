@@ -7,11 +7,11 @@ fi
 
 CURDIR=`pwd`
 OLDGOPATH="$GOPATH"
-export GOPATH="$CURDIR"
+export GOPATH="$GOPATH:$CURDIR"
 
 gofmt -w src
 
-go install main
+go install statsapp
 
 export GOPATH="$OLDGOPATH"
 
